@@ -50,3 +50,14 @@ const twoSum = function(nums, target) {
 
 
  twoSum(nums,target)
+
+// let map = new Map()
+
+// map.set("oliver","mini schnauzer")
+// map.set("charlie","whoodle")
+
+// console.log(map.has("oliver")) =>> "true"
+// console.log(map.get("oliver")) =>> "mini schnauzer"
+// console.log(map.has("whoodle")) =>> "false"
+// console.log(map.get("charlie")) =>> "whoodle"
+// console.log(map.size) =>> 2
