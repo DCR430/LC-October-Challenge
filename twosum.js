@@ -23,27 +23,27 @@
 // Output: [0,1]
 
 
-// PROCESS
-
+// PROCESS - USING A HASH MAP
+// create a new map 
 // loop thru nums array
-// set nums[i] to a variable current , you need to touch every part of the array
-// target - current gives us a new number set new number to a variable difference
+// set nums[i] to a variable "current" , you need to touch every part of the array
+// target - current gives us a new number set new number to a variable "difference"
 // if the map has the number set to difference as a result of subtracting the target and current,return an array of the indicies of both current and difference
- 
+
 
 nums = [3,2,4]
 target = 6
  
 const twoSum = function(nums, target) {
-    let map = new Map()
-    let len = nums.length
-    for(let i = 0; i < len; i++){
-        let current = nums[i]
-        let diff = target - current
-        if(map.has(diff)){
-            return [i,map.get(diff)]
+    let map = new Map()// set new object using map
+    let len = nums.length// variable to check length of nums
+    for(let i = 0; i < len; i++){ //loops thru nums array
+        let current = nums[i]// set variable of current element of nums array during loop
+        let diff = target - current// set variable of number of difference of target and current, number we are now looking for in map
+        if(map.has(diff)){ // map.has returns true if a key exists in a Map/ conditonal to see if diff is in map/ 
+            return [i,map.get(diff)] // map.get returns the value of the key/ if conditional met return array index of i and index of diff
         }
-        map.set(current,i)
+        map.set(current,i) // You can add elements to a Map with the set() method
       }
     }
 
