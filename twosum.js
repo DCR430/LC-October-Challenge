@@ -26,25 +26,26 @@
 // PROCESS
 
 // loop thru nums array
-// set nums[i] to a variable num1 , you need to touch every part of the array
-// target - nums[i] gives us a new number set new number to a variable num2
-// if the map has the number set to num2 as a result of subtracting the target and nums[i], return an array of 
+// set nums[i] to a variable current , you need to touch every part of the array
+// target - current gives us a new number set new number to a variable difference
+// if the map has the number set to difference as a result of subtracting the target and current,return an array of the indicies of both current and difference
+ 
 
 nums = [3,2,4]
- target = 6
+target = 6
  
- const twoSum =(array, integer) =>{
-     let map = new Map()
-     let len = array.lengthlet 
-     for(let i=0; i < len; i++){
-         let current = array[i]
-         let diff = integer - num1
-        if(map.has(difference)){
-         return [i,map.get(diff)]
+const twoSum = function(nums, target) {
+    let map = new Map()
+    let len = nums.length
+    for(let i = 0; i < len; i++){
+        let current = nums[i]
+        let diff = target - current
+        if(map.has(diff)){
+            return [i,map.get(diff)]
+        }
+        map.set(current,i)
       }
-      map.set(current,i)
     }
-}
 
 
 
