@@ -30,5 +30,22 @@
 // target - nums[i] gives us a new number set new number to a variable num2
 // if the map has the number set to num2 as a result of subtracting the target and nums[i], return an array of 
 
-
+nums = [3,2,4]
+ target = 6
  
+ const twoSum =(array, integer) =>{
+     let map = new Map()
+     let len = array.lengthlet 
+     for(let i=0; i < len; i++){
+         let current = array[i]
+         let diff = integer - num1
+        if(map.has(difference)){
+         return [i,map.get(diff)]
+      }
+      map.set(current,i)
+    }
+}
+
+
+
+ twoSum(nums,target)
